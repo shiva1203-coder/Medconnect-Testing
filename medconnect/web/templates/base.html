@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}MedConnect{% endblock %}</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-left">
+        <h2>MedConnect</h2>
+    </div>
+    <div class="header-right">
+        <a href="{{ url_for('web.login') }}">Logout</a>
+    </div>
+</header>
+
+<!-- Page Container -->
+<div class="page-container">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Appointments</a></li>
+            <li><a href="#">Doctors</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; {{ 2025 }} MedConnect. All rights reserved.</p>
+</footer>
+
+{% block extra_js %}{% endblock %}
+</body>
+</html>

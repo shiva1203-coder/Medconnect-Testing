@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}OPD Patients{% endblock %}
+
+{% block content %}
+<h3>OPD Queue</h3>
+
+{% if appointments %}
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Token</th>
+            <th>Patient Name</th>
+            <th>Appointment Time</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appt in appointments %}
+        <tr>
+            <td>{{ appt.token_number }}</td>
+            <td>{{ appt.patient.name }}</td>
+            <td>{{ appt.appointment_time.strftime('%H:%M') }}</td>
+            <td>
+                <form method="POST"
+                      action="{{ url_for('web.finish_appointment_view', appointment_id=appt.id) }}">
+                    <button type="submit">Finished</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No patients are currently waiting.</p>
+{% endif %}
+
+{% endblock %}

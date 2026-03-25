@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Doctor Profile{% endblock %}
+
+{% block content %}
+
+<h3>Doctor Profile</h3>
+
+<div class="profile-card">
+    <p><strong>Name:</strong> {{ doctor.name }}</p>
+    <p><strong>Department:</strong> {{ doctor.department }}</p>
+    <p><strong>Hospital:</strong> {{ doctor.hospital.name }}</p>
+
+    <p>
+        <strong>Status:</strong>
+        {% if doctor.is_available %}
+            <span style="color: green;">Available</span>
+        {% else %}
+            <span style="color: red;">Unavailable</span>
+        {% endif %}
+    </p>
+
+    <form method="POST"
+          action="{{ url_for('web.update_availability', doctor_id=doctor.id) }}">
+        <input type="hidden" name="is_available"
+               value="{{ 'false' if doctor.is_available else 'true' }}">
+
+        <button type="submit">
+            {% if doctor.is_available %}
+                Mark Unavailable
+            {% else %}
+                Mark Available
+            {% endif %}
+        </button>
+    </form>
+</div>
+
+{% endblock %}

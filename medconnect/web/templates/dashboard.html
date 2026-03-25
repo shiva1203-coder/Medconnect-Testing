@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<h3>Welcome to MedConnect</h3>
+
+<p>
+    This dashboard provides quick access to OPD management, 
+    doctor availability, and appointment tracking.
+</p>
+
+<div class="dashboard-cards">
+
+    <!-- Doctor Card -->
+    <div class="card">
+        <h4>Doctor Panel</h4>
+        <p>View OPD queue and manage patient consultations.</p>
+        <a href="{{ url_for('web.login') }}">Go to Doctor Login</a>
+    </div>
+
+    <!-- Admin Card -->
+    <div class="card">
+        <h4>Hospital Admin Panel</h4>
+        <p>Manage hospitals, doctors, and availability.</p>
+        <a href="{{ url_for('web.login') }}">Go to Admin Login</a>
+    </div>
+
+</div>
+
+{% endblock %}

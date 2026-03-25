@@ -1,0 +1,153 @@
+[2026-02-05 22:38:13,686] [INFO] root: MedConnect logging initialized
+[2026-02-05 22:38:13,822] [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.70.18.188:5000
+[2026-02-05 22:38:13,822] [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+[2026-02-05 22:38:13,822] [INFO] werkzeug:  * Restarting with stat
+[2026-02-05 22:38:14,497] [INFO] root: MedConnect logging initialized
+[2026-02-05 22:38:14,566] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-05 22:38:14,584] [INFO] werkzeug:  * Debugger PIN: 284-345-781
+[2026-02-05 22:38:17,472] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:38:17] "[33mGET / HTTP/1.1[0m" 404 -
+[2026-02-05 22:38:18,066] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:38:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2026-02-05 22:39:20,921] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:39:20] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+[2026-02-05 22:39:21,084] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:39:21] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2026-02-05 22:39:21,118] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:39:21] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2026-02-05 22:39:21,173] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:39:21] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=rjx7yJnGOIJWIZ73ZR2J HTTP/1.1" 200 -
+[2026-02-05 22:39:21,190] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:39:21] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2026-02-05 22:40:14,833] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\app.py', reloading
+[2026-02-05 22:40:14,978] [INFO] werkzeug:  * Restarting with stat
+[2026-02-05 22:40:16,316] [INFO] root: MedConnect logging initialized
+[2026-02-05 22:40:16,451] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-05 22:40:16,457] [INFO] werkzeug:  * Debugger PIN: 284-345-781
+[2026-02-05 22:40:26,029] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:40:26] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+[2026-02-05 22:40:26,207] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:40:26] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2026-02-05 22:40:26,216] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:40:26] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2026-02-05 22:40:26,230] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:40:26] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=nORF7d9mLFVPVVaASt9i HTTP/1.1" 200 -
+[2026-02-05 22:40:26,244] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:40:26] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2026-02-05 22:40:48,949] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\app.py', reloading
+[2026-02-05 22:40:49,072] [INFO] werkzeug:  * Restarting with stat
+[2026-02-05 22:40:50,393] [INFO] root: MedConnect logging initialized
+[2026-02-05 22:40:50,539] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-05 22:40:50,539] [INFO] werkzeug:  * Debugger PIN: 284-345-781
+[2026-02-05 22:40:53,623] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\app.py', reloading
+[2026-02-05 22:40:53,752] [INFO] werkzeug:  * Restarting with stat
+[2026-02-05 22:40:55,138] [INFO] root: MedConnect logging initialized
+[2026-02-05 22:40:55,272] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-05 22:40:55,278] [INFO] werkzeug:  * Debugger PIN: 284-345-781
+[2026-02-05 22:40:58,066] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:40:58] "GET /login HTTP/1.1" 200 -
+[2026-02-05 22:40:58,179] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:40:58] "GET /static/css/main.css HTTP/1.1" 200 -
+[2026-02-05 22:41:02,067] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:41:02] "[33mGET / HTTP/1.1[0m" 404 -
+[2026-02-05 22:41:17,227] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:41:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2026-02-05 22:41:17,259] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:41:17] "[35m[1mGET /doctor/11212 HTTP/1.1[0m" 500 -
+[2026-02-05 22:41:17,295] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:41:17] "GET /doctor/11212?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2026-02-05 22:41:17,298] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:41:17] "GET /doctor/11212?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2026-02-05 22:41:17,310] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:41:17] "GET /doctor/11212?__debugger__=yes&cmd=resource&f=console.png&s=nklpzJnvXltYDYxAtpnJ HTTP/1.1" 200 -
+[2026-02-05 22:41:17,322] [INFO] werkzeug: 127.0.0.1 - - [05/Feb/2026 22:41:17] "GET /doctor/11212?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2026-02-12 17:46:57,204] [INFO] root: MedConnect logging initialized
+[2026-02-12 17:46:57,284] [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.224:5000
+[2026-02-12 17:46:57,284] [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+[2026-02-12 17:46:57,294] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 17:46:57,697] [INFO] root: MedConnect logging initialized
+[2026-02-12 17:46:57,729] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 17:46:57,739] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 17:47:01,505] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 17:47:01] "[33mGET / HTTP/1.1[0m" 404 -
+[2026-02-12 17:47:01,787] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 17:47:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2026-02-12 17:47:11,528] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 17:47:11] "[33mGET / HTTP/1.1[0m" 404 -
+[2026-02-12 17:52:27,638] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\app.py', reloading
+[2026-02-12 17:52:27,739] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 17:52:28,711] [INFO] root: MedConnect logging initialized
+[2026-02-12 17:52:28,837] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 17:52:28,840] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 17:52:32,156] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 17:52:32] "[32mGET / HTTP/1.1[0m" 302 -
+[2026-02-12 17:52:32,194] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 17:52:32] "GET /login HTTP/1.1" 200 -
+[2026-02-12 17:52:32,300] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 17:52:32] "GET /static/css/main.css HTTP/1.1" 200 -
+[2026-02-12 17:55:51,531] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 17:55:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2026-02-12 17:55:51,537] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 17:55:51] "[33mGET /admin/-3 HTTP/1.1[0m" 404 -
+[2026-02-12 18:09:43,704] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:09:43,778] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:09:44,649] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:09:44,733] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:09:44,736] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:12:52,914] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:12:52,998] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:12:53,862] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:12:53,962] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:12:53,965] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:28:28,452] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\database\\database.py', reloading
+[2026-02-12 18:28:28,523] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:28:29,448] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:28:29,584] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:28:29,587] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:31:09,354] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:31:09,444] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:31:10,353] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:31:10,488] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:31:10,491] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:33:40,863] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:33:40,961] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:33:41,949] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:33:42,088] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:33:42,092] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:33:44,158] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:33:44,268] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:33:45,252] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:33:45,356] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:33:45,360] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:34:01,673] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:34:01,739] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:34:02,784] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:34:02,883] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:34:02,886] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:34:03,922] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:34:03,997] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:34:04,717] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:34:04,822] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:34:04,825] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:34:07,903] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:34:07,983] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:34:09,061] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:34:09,137] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:34:09,140] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:34:22,393] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:34:22,471] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:34:23,364] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:34:23,497] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:34:23,500] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:34:25,568] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:34:25,677] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:34:26,514] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:34:26,599] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:34:26,615] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:35:53,138] [INFO] werkzeug:  * Detected change in 'A:\\Medconnect\\medconnect\\seed.py', reloading
+[2026-02-12 18:35:53,211] [INFO] werkzeug:  * Restarting with stat
+[2026-02-12 18:35:54,094] [INFO] root: MedConnect logging initialized
+[2026-02-12 18:35:54,194] [WARNING] werkzeug:  * Debugger is active!
+[2026-02-12 18:35:54,201] [INFO] werkzeug:  * Debugger PIN: 546-743-476
+[2026-02-12 18:36:13,063] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 18:36:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2026-02-12 18:36:13,099] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 18:36:13] "[35m[1mGET /admin/1 HTTP/1.1[0m" 500 -
+[2026-02-12 18:36:13,279] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 18:36:13] "GET /admin/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2026-02-12 18:36:13,286] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 18:36:13] "GET /admin/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2026-02-12 18:36:13,313] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 18:36:13] "GET /admin/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2026-02-12 18:36:20,051] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 18:36:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2026-02-12 18:36:20,067] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 18:36:20] "[35m[1mGET /doctor/1 HTTP/1.1[0m" 500 -
+[2026-02-12 18:36:20,094] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 18:36:20] "GET /doctor/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2026-02-12 18:36:20,095] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 18:36:20] "GET /doctor/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2026-02-12 18:36:20,109] [INFO] werkzeug: 192.168.0.224 - - [12/Feb/2026 18:36:20] "GET /doctor/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2026-03-25 18:01:35,749] [INFO] root: MedConnect logging initialized
+[2026-03-25 18:01:35,860] [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.243:5000
+[2026-03-25 18:01:35,860] [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+[2026-03-25 18:01:35,860] [INFO] werkzeug:  * Restarting with stat
+[2026-03-25 18:01:36,208] [INFO] root: MedConnect logging initialized
+[2026-03-25 18:01:36,256] [WARNING] werkzeug:  * Debugger is active!
+[2026-03-25 18:01:36,262] [INFO] werkzeug:  * Debugger PIN: 882-787-577
+[2026-03-25 18:01:38,799] [INFO] werkzeug: 127.0.0.1 - - [25/Mar/2026 18:01:38] "[32mGET / HTTP/1.1[0m" 302 -
+[2026-03-25 18:01:38,828] [INFO] werkzeug: 127.0.0.1 - - [25/Mar/2026 18:01:38] "GET /login HTTP/1.1" 200 -
+[2026-03-25 18:01:38,991] [INFO] werkzeug: 127.0.0.1 - - [25/Mar/2026 18:01:38] "GET /static/css/main.css HTTP/1.1" 200 -
+[2026-03-25 18:01:39,022] [INFO] werkzeug: 127.0.0.1 - - [25/Mar/2026 18:01:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

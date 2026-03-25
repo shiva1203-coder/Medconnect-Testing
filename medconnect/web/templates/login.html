@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MedConnect Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+<div class="login-container">
+    <h2>MedConnect Login</h2>
+
+    <form method="POST">
+        <label>Select Role</label>
+        <select name="role" required>
+            <option value="">-- Select --</option>
+            <option value="doctor">Doctor</option>
+            <option value="admin">Hospital Admin</option>
+        </select>
+
+        <label>Enter ID</label>
+        <input type="number" name="user_id" placeholder="Doctor ID / Hospital ID" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p class="note">
+        * This is a demo login for MedConnect.  
+        Authentication will be added in future versions.
+    </p>
+</div>
+
+</body>
+</html>
