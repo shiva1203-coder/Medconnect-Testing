@@ -6,6 +6,7 @@ from config.settings import get_config
 from database.database import init_db
 from api.ivr_routes import ivr_bp
 from api.admin_routes import admin_bp
+from api.mobile_routes import mobile_bp
 from web.views import web_bp
 from utils.logger import setup_logger
 
@@ -16,7 +17,8 @@ def create_app():
     """
 
     # Load environment variables
-    load_dotenv("config/secrets.env")
+    env_file = os.getenv("ENV_FILE", "config/secrets.env")
+    load_dotenv(env_file)
 
     # Initialize Flask App
     app = Flask(
@@ -38,6 +40,7 @@ def create_app():
     # Register Blueprints
     app.register_blueprint(ivr_bp, url_prefix="/ivr")
     app.register_blueprint(admin_bp, url_prefix="/api/admin")
+    app.register_blueprint(mobile_bp, url_prefix="/api/mobile")
     app.register_blueprint(web_bp)
 
     # -----------------------------
@@ -62,5 +65,5 @@ if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
         port=int(os.getenv("PORT", 5000)),
-        debug=True
+        debug=bool(app.config.get("DEBUG", False))
     )

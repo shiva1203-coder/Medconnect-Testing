@@ -1,111 +1,124 @@
+import os
+from functools import wraps
 from flask import Blueprint, request, jsonify
-from datetime import datetime
 
 from database.database import SessionLocal
 from database.repository import (
     get_hospital_by_id,
-    get_available_doctors,
     set_doctor_availability,
     get_appointments_for_doctor,
-    complete_appointment
+    complete_appointment,
 )
 
 admin_bp = Blueprint("admin", __name__)
 
 
-# -----------------------------
-# Helper: DB Session
-# -----------------------------
 def get_db():
     return SessionLocal()
 
 
-# -----------------------------
-# Get Doctors of a Hospital
-# -----------------------------
+def require_admin_key(fn):
+    @wraps(fn)
+    def wrapped(*args, **kwargs):
+        expected = os.getenv("ADMIN_API_KEY")
+        if expected:
+            provided = request.headers.get("X-Admin-Key")
+            if provided != expected:
+                return jsonify({"error": "Unauthorized"}), 401
+        return fn(*args, **kwargs)
+
+    return wrapped
+
+
 @admin_bp.route("/hospitals/<int:hospital_id>/doctors", methods=["GET"])
+@require_admin_key
 def list_hospital_doctors(hospital_id):
     db = get_db()
-    hospital = get_hospital_by_id(db, hospital_id)
+    try:
+        hospital = get_hospital_by_id(db, hospital_id)
 
-    if not hospital:
-        db.close()
-        return jsonify({"error": "Hospital not found"}), 404
+        if not hospital:
+            return jsonify({"error": "Hospital not found"}), 404
 
-    doctors = hospital.doctors
-    db.close()
-
-    return jsonify({
-        "hospital": hospital.name,
-        "doctors": [
+        return jsonify(
             {
-                "id": d.id,
-                "name": d.name,
-                "department": d.department,
-                "is_available": d.is_available
+                "hospital": hospital.name,
+                "doctors": [
+                    {
+                        "id": d.id,
+                        "name": d.name,
+                        "department": d.department,
+                        "is_available": d.is_available,
+                    }
+                    for d in hospital.doctors
+                ],
             }
-            for d in doctors
-        ]
-    })
+        )
+    finally:
+        db.close()
 
 
-# -----------------------------
-# Set Doctor Availability
-# -----------------------------
 @admin_bp.route("/doctors/<int:doctor_id>/availability", methods=["POST"])
+@require_admin_key
 def update_doctor_availability(doctor_id):
-    is_available = request.json.get("is_available", True)
+    data = request.get_json(silent=True) or {}
+    is_available = bool(data.get("is_available", True))
 
     db = get_db()
-    doctor = set_doctor_availability(db, doctor_id, is_available)
-    db.close()
+    try:
+        doctor = set_doctor_availability(db, doctor_id, is_available)
+        if not doctor:
+            return jsonify({"error": "Doctor not found"}), 404
 
-    if not doctor:
-        return jsonify({"error": "Doctor not found"}), 404
+        return jsonify(
+            {
+                "message": "Doctor availability updated",
+                "doctor_id": doctor.id,
+                "is_available": doctor.is_available,
+            }
+        )
+    finally:
+        db.close()
 
-    return jsonify({
-        "message": "Doctor availability updated",
-        "doctor_id": doctor.id,
-        "is_available": doctor.is_available
-    })
 
-
-# -----------------------------
-# Doctor Dashboard: OPD Queue
-# -----------------------------
 @admin_bp.route("/doctors/<int:doctor_id>/appointments", methods=["GET"])
+@require_admin_key
 def doctor_opd_queue(doctor_id):
     db = get_db()
-    appointments = get_appointments_for_doctor(db, doctor_id)
-    db.close()
-
-    return jsonify({
-        "appointments": [
+    try:
+        appointments = get_appointments_for_doctor(db, doctor_id)
+        return jsonify(
             {
-                "appointment_id": a.id,
-                "patient_name": a.patient.name,
-                "token": a.token_number,
-                "time": a.appointment_time.isoformat()
+                "appointments": [
+                    {
+                        "appointment_id": a.id,
+                        "patient_name": a.patient.name,
+                        "token": a.token_number,
+                        "time": a.appointment_time.isoformat(),
+                    }
+                    for a in appointments
+                ]
             }
-            for a in appointments
-        ]
-    })
+        )
+    finally:
+        db.close()
 
 
-# -----------------------------
-# Mark Consultation Finished
-# -----------------------------
 @admin_bp.route("/appointments/<int:appointment_id>/complete", methods=["POST"])
+@require_admin_key
 def finish_appointment(appointment_id):
     db = get_db()
-    appointment = complete_appointment(db, appointment_id)
-    db.close()
+    try:
+        appointment = complete_appointment(db, appointment_id)
+        if not appointment:
+            return jsonify({"error": "Appointment not found"}), 404
 
-    if not appointment:
-        return jsonify({"error": "Appointment not found"}), 404
-
-    return jsonify({
-        "message": "Appointment marked as completed",
-        "appointment_id": appointment.id,
-        "completed_at": appointment.completed_at.isoformat()
-    })
+        return jsonify(
+            {
+                "message": "Appointment marked as completed",
+                "appointment_id": appointment.id,
+                "completed_at": appointment.completed_at.isoformat(),
+            }
+        )
+    finally:
+        db.close()
